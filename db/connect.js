@@ -7,7 +7,7 @@ const initDb = (callback) => {
     console.log('Db initialized!');
     return callback(null, _db);
   }
-  MongoClient.connect(process.env.API_KEY)
+  MongoClient.connect(process.env.MONGO_API_KEY)
     .then((client) => {
       _db = client;
       callback(null, _db);
