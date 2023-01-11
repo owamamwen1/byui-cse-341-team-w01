@@ -2,14 +2,12 @@ require('dotenv').config();
 const MongoClient = require('mongodb').MongoClient;
 
 let _db;
-const con = 'mongodb+srv://dbowas:8xU!ifUCKg2pT*v@cluster0.xexuuny.mongodb.net/dbTeamwrok?retryWrites=true&w=majority';
-
 const initDb = (callback) => {
   if (_db) {
     console.log('Db initialized!');
     return callback(null, _db);
   }
-  MongoClient.connect(con) // process.env.API_KEY
+  MongoClient.connect(process.env.API_KEY)
     .then((client) => {
       _db = client;
       callback(null, _db);
