@@ -1,3 +1,10 @@
 
 // GET 
+
 http://localhost:8080/professional
+
+// PRODUCTION Deploy
+
+https://cse341-teamwork-w02.onrender.com/professional
+
+
